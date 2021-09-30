@@ -1,11 +1,13 @@
 import react from "react";
+import {Navbar} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const NavBar = () => {
 
     return (
-        <div>
-            <h2>Navbar.js</h2>
-        </div>
+        <Navbar expand="lg" variant="dark" bg="dark">
+            <Navbar.Brand>Navbar</Navbar.Brand>
+        </Navbar>
     );
 
 }

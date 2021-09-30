@@ -1,9 +1,9 @@
 import react from "react";
 
-const Tile = () => {
+const Tile = ({title}) => {
     return (
-        <div>
-            <h2>Tile.js</h2>
+        <div className='tile'>
+            <h2>{title}</h2>
         </div>
     );
 

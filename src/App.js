@@ -1,25 +1,38 @@
 import './App.css';
-// import NavBar from './Navbar';
-
 import Tile from './Tile';
 import Footer from './Footer';
-import {Navbar} from 'react-bootstrap';
+import MyNav from './MyNav';
+import {Row, Col} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
   return (
-    <div className="App">
+
+    <div>
       
-      <Navbar expand="lg" variant="dark" bg="dark">
-          <Navbar.Brand>Navbar</Navbar.Brand>
-      </Navbar>
+      <MyNav />
 
-      <div>
-        <Tile title="App 1"/>
-      </div>
-
-      <Footer/>
-
+        <main className="container-fluid">      
+          <div>
+            <Row className="justify-content-sm-center bordered-red">
+              <Col lg={6} className='bordered-yellow d-flex justify-content-center'>
+                  <Tile title="App 1" />
+                  <Tile title="App 1" />
+                  <Tile title="App 1" />
+              </Col>
+            </Row>
+            <Row className="justify-content-sm-center bordered-red">
+              <Col lg={6} className='bordered-yellow d-flex justify-content-center'>
+                  <Tile className='tile' title="App 1" />
+                  <Tile title="App 1" />
+              </Col>
+            </Row>
+          </div>
+        
+        </main> 
+        
+        <Footer/>
+      
     </div>
   );
 }
